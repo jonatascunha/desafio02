@@ -1,27 +1,25 @@
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class Metodo2 {
-        ArrayList<Integer> numeros = new ArrayList<Integer>();
 
-        for (int i = 0; i < 10; i++) {
-            numeros.add(i);
-        }
-        public void returnmap () {
+        public void returnmap (List<Integer> list) {
             Map<String, Integer> map = new HashMap<>();
-            for (int numero : numeros) {
+            for (Integer numero : list) {
                 if (numero % 2 == 0) {
                     map.put("par", numero);
                 } else {
                     map.put("impar", numero);
                 }
 
-            }
-            for (Map.Entry<String, Integer> entry : map.entrySet()) {
-                System.out.println(entry.getKey() + "-" + entry.getValue());
-            }
+                for (String key : map.keySet()) {
+                    System.out.println(key + ": " + map.get(key));
 
+                }
+
+            }
 
         }
     }
