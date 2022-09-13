@@ -1,16 +1,16 @@
 import java.util.ArrayList;
 
 
+
 public class Metodo {
     public static void main(String[] args) {
-        ArrayList<Integer> numeros = new ArrayList<Integer>();
-
-        for (Integer i = 0; i <= 10; i++) {
-            numeros.add(i);
+        Metodo2 metodo = new Metodo2();
+        ArrayList<Integer> list = new ArrayList();
+        for(int i=0; i<=10; i++) {
+            list.add(i);
         }
-        Metodo2 map = new Metodo2();
-        map.returnmap(numeros);
+
+        System.out.println(metodo.listaParesImpares(list));
 
     }
 }
-
